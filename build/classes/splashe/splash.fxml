@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" fx:id="parent" styleClass="splash" stylesheets="@splashStyle.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="splashe.SplashController">
+   <children>
+      <ImageView fitHeight="356.0" fitWidth="477.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@school.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -26,7 +26,7 @@ public class SplashController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-      SplashForme.boucheApp(parent, Duration.seconds(5), (e)->{
+      SplashForme.boucheApp(parent, Duration.seconds(2), (e)->{
           Stage s = new Stage();
             try {
               

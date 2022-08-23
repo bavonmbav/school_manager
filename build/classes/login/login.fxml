@@ -1,11 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
-    
-</AnchorPane>
+<HBox fx:id="parent" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#getMove" onMouseDragged="#getDragged" stylesheets="@../mouvement/dark-theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <children>
+      <AnchorPane prefHeight="363.0" prefWidth="200.0" stylesheets="@stylelogin.css">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="pan" stylesheets="@stylelogin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label styleClass="logi" text="school" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets left="15.0" right="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="School Manager" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="60.0" left="60.0" right="60.0" top="60.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconsColor/literature_96px.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="2.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="363.0" prefWidth="289.0" styleClass="pan" stylesheets="@stylelogin.css">
+         <children>
+            <Pane layoutX="2.0" layoutY="18.0" opacity="0.67" prefHeight="327.0" prefWidth="281.0" style="-fx-background-radius: 50;" styleClass="pan2" stylesheets="@stylelogin.css">
+               <children>
+                  <TextField id="form1" fx:id="usernam" alignment="CENTER" layoutX="36.0" layoutY="127.0" opacity="0.55" prefHeight="0.0" prefWidth="230.0" promptText="UserNam" style="-fx-background-color: black;" />
+                  <PasswordField id="form2" fx:id="password2" alignment="CENTER" layoutX="37.0" layoutY="193.0" opacity="0.55" prefHeight="26.0" prefWidth="230.0" promptText="PassWord" style="-fx-background-color: black;" />
+                  <TextField id="form2" fx:id="password1" alignment="CENTER" layoutX="37.0" layoutY="193.0" opacity="0.55" prefHeight="0.0" prefWidth="230.0" promptText="PassWord" style="-fx-background-color: black;" visible="false" />
+                  <CheckBox fx:id="select" layoutX="73.0" layoutY="256.0" mnemonicParsing="false" onAction="#controlle" prefHeight="19.0" prefWidth="23.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Text fill="RED" layoutX="77.0" layoutY="310.0" onMouseClicked="#fermer" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="about-button" text="fermer" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Text fill="#09ff2a" layoutX="169.0" layoutY="310.0" onMouseClicked="#connecter" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="about-button" text="connexion" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <ImageView fitHeight="106.0" fitWidth="96.0" layoutX="97.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconsColor/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="54.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconsColor/delete_96px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="144.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconsColor/checkmark_96px.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="-9.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="345.0" prefWidth="12.0" />
+               </children>
+            </Pane>
+            <Text fx:id="affiche" fill="#008cff" layoutX="108.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Affichier le mot de passe" />
+         </children>
+      </AnchorPane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="MOVE" />
+   </cursor>
+</HBox>

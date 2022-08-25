@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableInscription.TableController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TableView fx:id="tableaux1" prefWidth="568.0" styleClass="colored-context-menu" stylesheets="@../mouvement/dark-theme.css">
+               <columns>
+                  <TableColumn fx:id="matricules1" prefWidth="94.0" text="Matricules" />
+                  <TableColumn fx:id="noms1" prefWidth="58.0" text="Nom" />
+                  <TableColumn fx:id="postnoms1" prefWidth="133.0" text="Post-Nom" />
+                  <TableColumn fx:id="prenoms1" prefWidth="77.0" text="Prenom" />
+                  <TableColumn fx:id="genres1" minWidth="0.0" prefWidth="65.0" text="Genre" />
+                  <TableColumn fx:id="classes1" minWidth="0.0" prefWidth="95.0" text="Classe" />
+               </columns>
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem fx:id="ed1" mnemonicParsing="false" onAction="#getRefresh" text="refresh" />
+                        <MenuItem fx:id="ed11" mnemonicParsing="false" onAction="#getEdite" text="Edit" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

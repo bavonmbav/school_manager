@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="colorpan" stylesheets="@../splashe/splashStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paramettre.ParameterController">
+   <children>
+      <VBox>
+         <children>
+            <Label text="Configuration" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="enregistreJour" prefHeight="25.0" prefWidth="290.0" promptText="usernom">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="findejourne" prefHeight="25.0" prefWidth="290.0" promptText="usernom">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="usernames" prefHeight="25.0" prefWidth="290.0" promptText="usernom">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="30.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="passwords" prefHeight="25.0" prefWidth="290.0" promptText="passWord">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#getSave" prefHeight="39.0" prefWidth="82.0" text="config">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#getCancel" prefHeight="39.0" prefWidth="82.0" text="cancel">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <stylesheets>
+            <URL value="@../mouvement/dark-theme.css" />
+            <URL value="@../splashe/splashStyle.css" />
+         </stylesheets>
+      </VBox>
+   </children>
+</StackPane>

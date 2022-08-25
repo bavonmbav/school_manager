@@ -47,11 +47,11 @@ public class MainSms {
                     
         */
         InternetAddress[] recipient = new InternetAddress[1];
-        recipient[0] = new InternetAddress("18mt469@esisalama.org");
+        recipient[0] = new InternetAddress("18mm272@esisalama.org");
 
         try {
             message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("18mt469@esisalama.org"));
+            message.setFrom(new InternetAddress("18mm272@esisalama.org"));
             message.addRecipients(Message.RecipientType.TO, recipient);
             message.setSubject("un eleve a etait enregistrer");
             message.setText("message recu");

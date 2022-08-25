@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tables>
+    <table-entry name="ELEVE" col-data="matricule varchar(15) primary key, Nom varchar(25),postnom varchar(25),prenom varchar(25),genre char(1), classe varchar(10), FOREIGN KEY(classe) REFERENCES CLASSE(id)"/>
+
+    <table-entry name="CLASSE" col-data="id varchar(10) primary key,NomClasse varchar(25)"/>
+    
+    <table-entry name="PAIEMENT" col-data="motif varchar(25) primary key,idEleve varchar(25),Mois varchar(25),idClass varchar(25),FOREIGN KEY (idEleve ) REFERENCES ELEVE(matricule),FOREIGN KEY (idClass) REFERENCES CLASSE(id)"/>
+
+    <table-entry name="PROFESSEUR" col-data="idMat varchar(25),Nom_prof varchar(25),prenom varchar(1024),cours varchar(25),classes varchar(25),FOREIGN KEY (Classes) REFERENCES CLASSE(id), FOREIGN KEY (cours) REFERENCES COURS(id)"/>
+
+    <table-entry name="COUR" col-data="id varchar(15) primary key,nom_du_cours varchar(25)"/>
+
+    <table-entry name="PARENT" col-data="Nom varchar(25),prenom varchar(24),telephone integer,idEleve varchar(15),FOREIGN KEY (idEleve ) REFERENCES ELEVE(matricule)"/>
+</tables>

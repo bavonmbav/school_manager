@@ -1,9 +1,8 @@
 
 package login;
 
-import database.Connections;
+
 import java.net.URL;
-import java.sql.Connection;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +13,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import mouvement.MovePane;
-import static database.Connections.select;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
+import static animation.Verifier.getValide;
 
 public class LoginController implements Initializable {
 
@@ -32,13 +33,13 @@ public class LoginController implements Initializable {
     private HBox parent;
 
     MovePane bord = new MovePane();
-    private static Connection conn = null;
-    private static java.sql.Statement stmt = null;
-    private static java.sql.ResultSet resultat = null;
+  
 
+     Security preference;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-            Connections con = new Connections();
+       preference =Security.getsecurity();
     }    
 
     @FXML
@@ -46,12 +47,17 @@ public class LoginController implements Initializable {
           System.exit(0);
     }
 
+   
+    
     @FXML
     private void connecter(MouseEvent event) {
+        
+        String use =  StringUtils.trimToEmpty(usernam.getText()); //annuler les espaces
+        String pass = DigestUtils.shaHex(password2.getText()); // hasher le code
          
-        String use = usernam.getText() ;
-        String pass = password2.getText();
-        String sel = "select * from login";
+        TextField user = usernam;
+        PasswordField passe = password2;
+   
         HBox box = parent;
 
         if (use.isEmpty() || pass.isEmpty()) {
@@ -59,7 +65,7 @@ public class LoginController implements Initializable {
         }
         else
         {
-             select(sel, use, pass,box);
+             getValide(use,pass,box,user,passe);
         }  
     }
 

@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DialogPane;
+import javafx.stage.StageStyle;
 
 
 public class MovePane {
@@ -37,7 +38,9 @@ public class MovePane {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(page+".fxml"));
             s.setScene(new Scene(root));
+            s.initStyle(StageStyle.TRANSPARENT);
             s.show();
+          
             return s;
         }
         catch (Exception e) {
@@ -46,7 +49,23 @@ public class MovePane {
         }
         
     }
-    
+    public  Stage stage1(String page)
+    {   
+        Stage s = new Stage();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(page+".fxml"));
+            s.setScene(new Scene(root));
+            s.initStyle(StageStyle.DECORATED);
+            s.show();
+          
+            return s;
+        }
+        catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+        
+    }
     public void verifier(String title, String mesaage)
     {
       

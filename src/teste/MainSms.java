@@ -32,14 +32,13 @@ public class MainSms {
 
         Authenticator auth = new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("18mt469@gmail.com", "irsmqgkbyucovmxf");
+                return new PasswordAuthentication("XXXXXXXgmail.com", "xxxxxxx");
             }
         };
 
         session = Session.getDefaultInstance(properties, auth);
 
-         //passWord
-        //irsmqgkbyucovmxf
+    
         /*
                     internet addresse contient une addresse mail de destinataire
                     il est evident que l'objet internetaddrress soit un tableau a l'initial
@@ -47,11 +46,11 @@ public class MainSms {
                     
         */
         InternetAddress[] recipient = new InternetAddress[1];
-        recipient[0] = new InternetAddress("18mm272@esisalama.org");
+        recipient[0] = new InternetAddress("XXXXXXXx");
 
         try {
             message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("18mm272@esisalama.org"));
+            message.setFrom(new InternetAddress("xxxxxxxxxxxxx"));
             message.addRecipients(Message.RecipientType.TO, recipient);
             message.setSubject("un eleve a etait enregistrer");
             message.setText("message recu");

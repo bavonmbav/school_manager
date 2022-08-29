@@ -14,7 +14,7 @@
     <jar href="lib\derbyclient.jar" size="590087" download="eager" />
     <jar href="lib\gson-2.8.1.jar" size="232620" download="eager" />
     <jar href="lib\javax.mail-1.6.1.jar" size="654100" download="eager" />
-    <jar href="school_manager.jar" size="427418" download="eager" />
+    <jar href="school_manager.jar" size="457880" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="school_manager" >
     <param name="requiredFXVersion" value="8.0+"/>

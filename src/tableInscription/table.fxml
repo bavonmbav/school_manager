@@ -1,35 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableInscription.TableController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../mouvement/dark-theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableInscription.TableController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <TableView fx:id="tableaux" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="526.0" styleClass="colored-context-menu" stylesheets="@../mouvement/dark-theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="matricules" prefWidth="94.0" text="Matricules" />
+            <TableColumn fx:id="noms" prefWidth="58.0" text="Nom" />
+            <TableColumn fx:id="postnoms" prefWidth="133.0" text="Post-Nom" />
+            <TableColumn fx:id="prenoms" prefWidth="77.0" text="Prenom" />
+            <TableColumn fx:id="genres" minWidth="0.0" prefWidth="65.0" text="Genre" />
+            <TableColumn fx:id="classes" minWidth="0.0" prefWidth="95.0" text="Classe" />
+         </columns>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#getRefresh" text="refresh" />
+                  <MenuItem mnemonicParsing="false" onAction="#getEdite" text="Edit" />
+                  <MenuItem mnemonicParsing="false" onAction="#getDelete" text="Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#getRecherche" text="recherche" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <VBox fx:id="box" prefHeight="21.0" prefWidth="325.0" styleClass="menu-bar" stylesheets="@../mouvement/dark-theme.css" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TableView fx:id="tableaux1" prefWidth="568.0" styleClass="colored-context-menu" stylesheets="@../mouvement/dark-theme.css">
-               <columns>
-                  <TableColumn fx:id="matricules1" prefWidth="94.0" text="Matricules" />
-                  <TableColumn fx:id="noms1" prefWidth="58.0" text="Nom" />
-                  <TableColumn fx:id="postnoms1" prefWidth="133.0" text="Post-Nom" />
-                  <TableColumn fx:id="prenoms1" prefWidth="77.0" text="Prenom" />
-                  <TableColumn fx:id="genres1" minWidth="0.0" prefWidth="65.0" text="Genre" />
-                  <TableColumn fx:id="classes1" minWidth="0.0" prefWidth="95.0" text="Classe" />
-               </columns>
-               <contextMenu>
-                  <ContextMenu>
-                     <items>
-                        <MenuItem fx:id="ed1" mnemonicParsing="false" onAction="#getRefresh" text="refresh" />
-                        <MenuItem fx:id="ed11" mnemonicParsing="false" onAction="#getEdite" text="Edit" />
-                     </items>
-                  </ContextMenu>
-               </contextMenu>
-            </TableView>
+            <HBox prefHeight="40.0" prefWidth="258.0">
+               <children>
+                  <TextField fx:id="filters" alignment="CENTER" promptText="Recherche...." styleClass="filler" stylesheets="@../mouvement/dark-theme.css" />
+                  <ImageView fitHeight="150.0" fitWidth="40.0" onMouseClicked="#getcloseRecherche" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconsColor/shutdown_96px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
          </children>
-      </AnchorPane>
+      </VBox>
    </children>
-</StackPane>
+   <styleClass>
+      <String fx:value="menu-item" />
+      <String fx:value="column-header" />
+   </styleClass>
+</AnchorPane>

@@ -61,21 +61,10 @@ public class AddElevesController implements Initializable {
         
     }    
 
-    public void liste()
-    {
-        liste.add(new Eleves());
-        
-        for(Eleves e: liste)
-        {
-            e.getClasse();
-        }
-    }
+   
     @FXML
     private void getClasses(ActionEvent event) {
-        if(choixClasse.isPressed())
-        {
-            liste();
-        }
+       
     }
 
     @FXML

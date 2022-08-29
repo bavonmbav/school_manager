@@ -2,11 +2,29 @@
 package controller;
 
 public class Eleves {
+    String matricule;
     String nom;
     String postnom;
     String prenom;
     String genre;
     String classe;
+
+    public String getMatricule() {
+        return matricule;
+    }
+
+    public void setMatricule(String matricule) {
+        this.matricule = matricule;
+    }
+
+    public Eleves(String matricule, String nom, String postnom, String prenom, String genre, String classe) {
+        this.matricule = matricule;
+        this.nom = nom;
+        this.postnom = postnom;
+        this.prenom = prenom;
+        this.genre = genre;
+        this.classe = classe;
+    }
 
     public Eleves(String nom, String postnom, String prenom, String genre, String classe) {
         this.nom = nom;

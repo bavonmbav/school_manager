@@ -17,7 +17,7 @@
    <children>
       <AnchorPane prefHeight="378.0" prefWidth="385.0" styleClass="colorpan" stylesheets="@../splashe/splashStyle.css">
          <children>
-            <VBox prefHeight="363.0" prefWidth="446.0" spacing="10.0" styleClass="colorpan" stylesheets="@../splashe/splashStyle.css" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="0.0">
+            <VBox prefHeight="396.0" prefWidth="385.0" spacing="10.0" styleClass="colorpan" stylesheets="@../splashe/splashStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <TextField fx:id="matricule" promptText="Matricule" styleClass="text-field" stylesheets="@../splashe/splashStyle.css" VBox.vgrow="ALWAYS">
                      <VBox.margin>

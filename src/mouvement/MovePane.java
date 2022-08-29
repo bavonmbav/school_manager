@@ -49,13 +49,14 @@ public class MovePane {
         }
         
     }
-    public  Stage stage1(String page)
+    public  Stage stage1(String page, String titre)
     {   
         Stage s = new Stage();
         try {
             Parent root = FXMLLoader.load(getClass().getResource(page+".fxml"));
             s.setScene(new Scene(root));
             s.initStyle(StageStyle.DECORATED);
+            s.setTitle(titre);
             s.show();
           
             return s;

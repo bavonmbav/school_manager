@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import mouvement.MovePane;
 
@@ -38,13 +37,44 @@ public class HomeController implements Initializable {
     @FXML
     private void gteInscription(ActionEvent event) {
         String page = "/tableInscription/table";
-        bord.stage1(page);
+        String titre = "Inscription";
+       
+        bord.stage1(page, titre);
     }
 
     @FXML
     private void getParametre(ActionEvent event) {
         String page = "/paramettre/parameter";
-        bord.stage1(page);
+          String titre = "Paramettre";
+        bord.stage1(page,titre);
+    }
+
+    //=========ajouter les eleves =============//
+    @FXML
+    private void getElevs(ActionEvent event) {
+                String page = "/addEleve/AddEleves";
+                 String titre = "Ajouter Eleve";
+                 bord.stage1(page,titre);
+    }
+    //=========ajouter les cours =============//
+    @FXML
+    private void getCours(ActionEvent event) {
+    }
+    //=========ajouter les professeurs =============//
+    @FXML
+    private void getProfs(ActionEvent event) {
+    }
+    //=========ajouter les parent des eleves =============//
+    @FXML
+    private void getParent(ActionEvent event) {
+    }
+    //=========affectuer  les paiments =============//
+    @FXML
+    private void getPaiments(ActionEvent event) {
+    }
+    //=========ajouter les classes =============//
+    @FXML
+    private void getClasse(ActionEvent event) {
     }
     
 }
